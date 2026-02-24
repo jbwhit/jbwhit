@@ -1,0 +1,7 @@
+#!/bin/sh
+# Auto-format Python with ruff before committing
+if command -v ruff > /dev/null 2>&1; then
+    ruff format --quiet .
+    ruff check --fix --quiet .
+    git add -u
+fi
