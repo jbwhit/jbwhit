@@ -44,21 +44,6 @@ projects_tree.add(
         "checklists for investing and causal inference",
     )
 )
-projects_tree.add(
-    entry(
-        "RebalanceAssetAllocation",
-        "https://github.com/jbwhit/RebalanceAssetAllocation",
-        "Python code for portfolio allocation analysis",
-    )
-)
-projects_tree.add(
-    entry(
-        "fine-structure-inference",
-        "https://github.com/jbwhit/fine-structure-inference",
-        "data science methods for physics research",
-    )
-)
-
 teaching_tree = tree.add("📚 Teaching", guide_style="bright_black")
 teaching_tree.add(
     entry(
@@ -104,28 +89,6 @@ talks_tree.add(
         "using Jupyter for data science",
     )
 )
-talks_tree.add(
-    entry(
-        "OSCON-2015",
-        "https://github.com/jbwhit/OSCON-2015",
-        "talk on Jupyter workflows",
-    )
-)
-talks_tree.add(
-    entry(
-        "PyCon EDA Tutorial",
-        "https://github.com/jbwhit/2017-05-PyCon-EDA-Tutorial",
-        "exploratory data analysis workshop",
-    )
-)
-talks_tree.add(
-    entry(
-        "Grace Hopper Workshop",
-        "https://github.com/jbwhit/2018-grace-hopper-eda-workshop",
-        "EDA workshop materials",
-    )
-)
-
 online_tree = tree.add("⭐ Online", guide_style="bright_black")
 online_tree.add(
     entry(
