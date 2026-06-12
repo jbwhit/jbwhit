@@ -9,66 +9,144 @@ from rich.tree import Tree
 
 console = Console(record=True, width=100)
 
+LABEL_WIDTH = 30
+
+
+def entry(label: str, url: str, desc: str) -> str:
+    return f"[bold link={url}]{label}[/]{' ' * (LABEL_WIDTH - len(label))} - [bright_black]{desc}"
+
+
 tree = Tree(
     "🙂 [link=https://jonathanwhitmore.com]Jonathan Whitmore[/]"
     " — [bright_black]physicist, data scientist, generative artist",
     guide_style="bold bright_black",
 )
 
-talks_tree = tree.add("🎙️ Talks & Tutorials", guide_style="bright_black")
-talks_tree.add(
-    "[bold link=https://github.com/jbwhit/jupyter-tips-and-tricks]jupyter-tips-and-tricks[/]       - [bright_black]using Jupyter for data science"
+projects_tree = tree.add("🔧 Projects", guide_style="bright_black")
+projects_tree.add(
+    entry(
+        "Lithuanian Practice",
+        "https://lithuanian-practice.com/",
+        "FastHTML & MonsterUI webapp for learning Lithuanian",
+    )
 )
-talks_tree.add(
-    "[bold link=https://github.com/jbwhit/OSCON-2015]OSCON-2015[/]                     - [bright_black]talk on Jupyter workflows"
+projects_tree.add(
+    entry(
+        "UCSD Physics Quals Archive",
+        "https://jonathanwhitmore.com/projects/physics-quals/",
+        "PhD qualifying exams (1987-2019), maintained since 2008",
+    )
 )
-talks_tree.add(
-    "[bold link=https://github.com/jbwhit/2017-05-PyCon-EDA-Tutorial]PyCon EDA Tutorial[/]            - [bright_black]exploratory data analysis workshop"
+projects_tree.add(
+    entry(
+        "Decision Checklists",
+        "https://jonathanwhitmore.com/projects/checklists/",
+        "checklists for investing and causal inference",
+    )
 )
-talks_tree.add(
-    "[bold link=https://github.com/jbwhit/2018-grace-hopper-eda-workshop]Grace Hopper Workshop[/]          - [bright_black]EDA workshop materials"
+projects_tree.add(
+    entry(
+        "RebalanceAssetAllocation",
+        "https://github.com/jbwhit/RebalanceAssetAllocation",
+        "Python code for portfolio allocation analysis",
+    )
+)
+projects_tree.add(
+    entry(
+        "fine-structure-inference",
+        "https://github.com/jbwhit/fine-structure-inference",
+        "data science methods for physics research",
+    )
 )
 
 teaching_tree = tree.add("📚 Teaching", guide_style="bright_black")
 teaching_tree.add(
-    "[bold link=https://github.com/jbwhit/berkeley-jupyter-notebook]berkeley-jupyter-notebook[/]      - [bright_black]lecture at Berkeley Institute for Data Science"
+    entry(
+        "berkeley-jupyter-notebook",
+        "https://github.com/jbwhit/berkeley-jupyter-notebook",
+        "lecture at Berkeley Institute for Data Science",
+    )
 )
 teaching_tree.add(
-    "[bold link=https://github.com/jbwhit/data-science-teams]data-science-teams[/]             - [bright_black]notebooks for my data science course"
+    entry(
+        "data-science-teams",
+        "https://github.com/jbwhit/data-science-teams",
+        "notebooks for my data science course",
+    )
 )
 teaching_tree.add(
-    "[bold link=https://github.com/jbwhit/WSP-312-Tips-and-Tricks]WSP-312 Stanford[/]               - [bright_black]tips & tricks for data scientists (Stanford)"
+    entry(
+        "WSP-312 Stanford",
+        "https://github.com/jbwhit/WSP-312-Tips-and-Tricks",
+        "tips & tricks for data scientists (Stanford)",
+    )
 )
 teaching_tree.add(
-    "[bold link=https://jbwhitmore.gumroad.com/l/jupytermastery]Jupyter Mastery[/]                - [bright_black]online course on mastering Jupyter"
+    entry(
+        "Jupyter Mastery",
+        "https://jbwhitmore.gumroad.com/l/jupytermastery",
+        "online course on mastering Jupyter",
+    )
 )
 
-projects_tree = tree.add("🔧 Projects", guide_style="bright_black")
-projects_tree.add(
-    "[bold link=https://jonathanwhitmore.com/projects/physics-quals/]UCSD Physics Quals Archive[/]     - [bright_black]PhD qualifying exams (1987-2019), maintained since 2008"
+talks_tree = tree.add("🎙️ Talks & Tutorials", guide_style="bright_black")
+talks_tree.add(
+    entry(
+        "Full talk archive",
+        "https://jonathanwhitmore.com/projects/talks/",
+        "conference talks, tutorials, and lectures (2011-2019)",
+    )
 )
-projects_tree.add(
-    "[bold link=https://jonathanwhitmore.com/projects/checklists/]Decision Checklists[/]            - [bright_black]checklists for investing and causal inference"
+talks_tree.add(
+    entry(
+        "jupyter-tips-and-tricks",
+        "https://github.com/jbwhit/jupyter-tips-and-tricks",
+        "using Jupyter for data science",
+    )
 )
-projects_tree.add(
-    "[bold link=https://github.com/jbwhit/lithuanianquiz]lithuanianquiz[/]                - [bright_black]FastHTML & MonsterUI webapp for learning Lithuanian"
+talks_tree.add(
+    entry(
+        "OSCON-2015",
+        "https://github.com/jbwhit/OSCON-2015",
+        "talk on Jupyter workflows",
+    )
 )
-projects_tree.add(
-    "[bold link=https://github.com/jbwhit/RebalanceAssetAllocation]RebalanceAssetAllocation[/]       - [bright_black]Python code for portfolio allocation analysis"
+talks_tree.add(
+    entry(
+        "PyCon EDA Tutorial",
+        "https://github.com/jbwhit/2017-05-PyCon-EDA-Tutorial",
+        "exploratory data analysis workshop",
+    )
 )
-projects_tree.add(
-    "[bold link=https://github.com/jbwhit/fine-structure-inference]fine-structure-inference[/]       - [bright_black]data science methods for physics research"
+talks_tree.add(
+    entry(
+        "Grace Hopper Workshop",
+        "https://github.com/jbwhit/2018-grace-hopper-eda-workshop",
+        "EDA workshop materials",
+    )
 )
 
 online_tree = tree.add("⭐ Online", guide_style="bright_black")
 online_tree.add(
-    "[bold link=https://jonathanwhitmore.com]jonathanwhitmore.com[/]          - [bright_black]physics, data science, and learning systems"
+    entry(
+        "jonathanwhitmore.com",
+        "https://jonathanwhitmore.com",
+        "physics, data science, and learning systems",
+    )
 )
 online_tree.add(
-    "[bold link=https://www.jbwhitmoreart.com/]jbwhitmoreart.com[/]             - [bright_black]generative art — motion, form, and color"
+    entry(
+        "jbwhitmoreart.com",
+        "https://www.jbwhitmoreart.com/",
+        "generative art — motion, form, and color",
+    )
 )
 online_tree.add(
-    "[bold link=https://www.youtube.com/@JonathanWhitmore]YouTube[/]                       - [bright_black]educational videos and live coding"
+    entry(
+        "YouTube",
+        "https://www.youtube.com/@JonathanWhitmore",
+        "educational videos and live coding",
+    )
 )
 
 console.print(tree)
