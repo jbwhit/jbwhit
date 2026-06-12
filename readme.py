@@ -25,6 +25,27 @@ tree = Tree(
 projects_tree = tree.add("🔧 Projects", guide_style="bright_black")
 projects_tree.add(
     entry(
+        "GPS in Reverse",
+        "https://jbwhit.github.io/clocks/",
+        "gravitational time dilation + particle-filter inference",
+    )
+)
+projects_tree.add(
+    entry(
+        "The Rediscovery of Neptune",
+        "https://jbwhit.github.io/discoverneptune/",
+        "recreating Le Verrier's 1846 discovery with REBOUND",
+    )
+)
+projects_tree.add(
+    entry(
+        "The Last Moon",
+        "https://jbwhit.github.io/habitable-zone-black-holes/",
+        "habitable-zone black holes as a technosignature",
+    )
+)
+projects_tree.add(
+    entry(
         "Lithuanian Practice",
         "https://lithuanian-practice.com/",
         "FastHTML & MonsterUI webapp for learning Lithuanian",
@@ -35,13 +56,6 @@ projects_tree.add(
         "UCSD Physics Quals Archive",
         "https://jonathanwhitmore.com/projects/physics-quals/",
         "PhD qualifying exams (1987-2019), maintained since 2008",
-    )
-)
-projects_tree.add(
-    entry(
-        "Decision Checklists",
-        "https://jonathanwhitmore.com/projects/checklists/",
-        "checklists for investing and causal inference",
     )
 )
 teaching_tree = tree.add("📚 Teaching", guide_style="bright_black")
